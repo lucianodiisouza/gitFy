@@ -15,9 +15,21 @@ function handleLoad() {
 
     const nome = document.querySelector(".nome");
     const empresa = document.querySelector(".empresa");
+    const avatar = document.querySelector(".avatar");
+    const followers = document.querySelector(".followers");
+    const following = document.querySelector(".following");
+    const repos = document.querySelector(".repos");
+    const bio = document.querySelector(".bio");
+    const linkTo = document.querySelector(".linkTo");
 
     nome.innerText = data.name;
     empresa.innerText = data.company;
+    avatar.src = data.avatar_url;
+    followers.innerText = data.followers;
+    following.innerText = data.following;
+    repos.innerText = data.public_repos;
+    bio.innerText = data.bio;
+    linkTo.href = data.html_url;
 }
 
 http.addEventListener("load", handleLoad);
